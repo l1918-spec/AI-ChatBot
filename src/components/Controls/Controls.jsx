@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import styles from './Controls.module.css';
-export function Controls({onSend}) {
-    const  [content, setContent]  = useState("");
+
+export function Controls({ onSend }) {
+    const [content, setContent] = useState("");
 
     function handleContentChange(event) {
         setContent(event.target.value);
@@ -13,12 +14,22 @@ export function Controls({onSend}) {
             setContent("");
         }
     }
+
+    function handleEnterPress(event) {
+        if (event.key === 'Enter' && !event.shiftKey) {
+            event.preventDefault();
+            handleContentSend();
+        }
+    }
+
     return (
         <div className={styles.Controls}>
             <div className={styles.TextAreaContainer}>
-                <textarea className={styles.TextArea} placeholder="Message AI Chat-Bot"
+                <textarea className={styles.TextArea}
+                    placeholder="Message AI Chat-Bot"
                     value={content}
                     onChange={handleContentChange}
+                    onKeyDown={handleEnterPress}
                 />
             </div>
             <button className={styles.Button} onClick={handleContentSend}>
@@ -27,7 +38,6 @@ export function Controls({onSend}) {
         </div>
     );
 }
-
 
 function SendIcon() {
     return (
