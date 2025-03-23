@@ -15,7 +15,7 @@
     font-size: 15px;
 
     &[data-role="user"] {
-        background-color: #f3f3f3;
+        background-color: light-dark( #f3f3f3, #303030);
         align-self: flex-end;
     }
 }

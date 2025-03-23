@@ -3,9 +3,9 @@
   line-height: 1.5;
   font-weight: 400;
 
-  /* color-scheme: light dark; */
-  color: #0d0d0d;
-  background-color: #f3f3f3;
+  color-scheme: light dark; 
+  color: light-dark(#4d4949, #ececec);
+  background-color: light-dark (#f3f3f3, #403c3c);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

@@ -7,11 +7,16 @@
     top: 0;
     left: 0;
     position: fixed;
-    background: #f3f3f3;
+    background: light-dark (#f3f3f3, #171717);
     opacity: 0.6;
 }
 
-
+@media (prefers-color-scheme: dark) {
+    .LoaderWrapper {
+        opacity: 0.85;
+        background: light-dark (#171717, #f3f3f3);
+    }
+}
 .Loader {
     /* HTML: <div class="loader"></div> */
             height: 30px;
