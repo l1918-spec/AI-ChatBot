@@ -21,7 +21,7 @@
 .ChatContainer {
     flex-grow: 1;
     width: 100%;
-    background: light-dark (#0c0b0b, #837e7e);
+    background:light-dark (#f1efef, #212121);
     border-radius: 17px;
     overflow: auto;
 }

@@ -19,7 +19,7 @@
     border: none;
     outline: none;
     resize: none;
-    background: light-dark (#ffffffff, #212121);
+    background: light-dark (#f1efef, #212121);
 }
 
 .Button {
